@@ -1,0 +1,140 @@
+:root {
+  /* Colors */
+  --Nutmeg: hsl(14, 45%, 36%);
+  --Dark-Raspberry: hsl(332, 51%, 32%);
+  --White: hsl(0, 0%, 100%);
+  --Rose-White: hsl(330, 100%, 98%);
+  --Eggshell: hsl(30, 54%, 90%);
+  --Light-Grey: hsl(30, 18%, 87%);
+  --Wenge-Brown: hsl(30, 10%, 34%);
+  --Dark-Charcoal: hsl(24, 5%, 18%);
+
+  /* Font */
+  --ff-accent: "Young Serif", serif;
+  --ff-body: "Outfit", sans-serif;
+  --fw-400: 400;
+  --fw-600: 600;
+  --fw-700: 700;
+}
+
+/* General Styling */
+.sr-only {
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  left: -10000px;
+  white-space: nowrap;
+}
+body {
+  font-family: var(--ff-body);
+  background-color: var(--Eggshell);
+  color: var(--Wenge-Brown);
+  line-height: 1.6;
+}
+h2,
+h3 {
+  font-family: var(--ff-accent);
+  line-height: 1.1;
+}
+
+h2 {
+  color: var(--Dark-Charcoal);
+  font-weight: var(--fw-700);
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+h4 {
+  color: var(--Dark-Raspberry);
+  font-size: 1.2rem;
+  font-weight: var(--fw-600);
+  margin-bottom: 1rem;
+}
+.bold-text {
+  font-weight: var(--fw-600);
+}
+.accent-font {
+  color: var(--Nutmeg);
+  font-weight: var(--fw-700);
+}
+
+/* Main Content */
+
+.main-content {
+  background-color: var(--White);
+}
+.details {
+  padding-inline: 1.875rem;
+}
+.details > * {
+  margin-top: 2rem;
+}
+
+.preparation {
+  background-color: var(--Rose-White);
+  padding: 1.5rem;
+  border-radius: 15px;
+}
+ul {
+  padding-left: 1.5rem;
+}
+ul li {
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.preparation ul li::marker {
+  color: var(--Dark-Raspberry);
+}
+.ingredients ul li::marker,
+.instructions ul li::marker {
+  color: var(--Nutmeg);
+  font-weight: var(--fw-700);
+}
+
+.ingredients,
+.instructions {
+  border-bottom: 1px solid var(--Light-Grey);
+  padding-bottom: 2rem;
+}
+
+.instructions ul {
+  list-style-type: decimal;
+}
+
+.table {
+  margin-block: 1rem;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table tr td {
+  padding-block: 1rem;
+  padding-left: 2rem;
+}
+
+.table tr:not(:last-child) td {
+  border-bottom: 1px solid var(--Light-Grey);
+}
+
+@media (min-width: 680px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+  .main-content {
+    max-width: 737px;
+    margin-inline: auto;
+    padding: 2rem;
+    margin-block: 7.375rem;
+    border-radius: 20px;
+  }
+
+  .img-container img {
+    border-radius: 10px;
+  }
+}
